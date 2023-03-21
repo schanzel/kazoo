@@ -192,6 +192,11 @@ class QuotaExceededError(ZookeeperError):
     """Exceeded the quota that was set on the path"""
 
 
+@_zookeeper_exception(-121)
+class NoWatcherError(ZookeeperError):
+    """No watcher was found at the supplied path"""
+
+
 class ConnectionClosedError(SessionExpiredError):
     """Connection is closed"""
 
